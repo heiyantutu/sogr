@@ -1,5 +1,7 @@
 # SOGR: Semantic Object Graph Runtime
 
+**Language:** **English** · [简体中文](SOGR.zh.md) · [Project README](../README.md)
+
 **A Structured Incremental Architecture for Long-Context Language Modeling**
 
 Zeping Tu  
