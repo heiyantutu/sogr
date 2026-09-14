@@ -4,7 +4,8 @@
 
 Zeping Tu  
 Frontend Engineer  
-Independent Research Draft · Version 0.3 · September 2026
+Independent Research Draft · Version 0.3 · September 2026  
+Repository: https://github.com/heiyantutu/sogr
 
 ## Abstract
 
@@ -46,11 +47,33 @@ The important distinction from conventional sparse attention is that the graph i
 
 ## 4. Architecture
 
-The architecture consists of four principal operators: Global Graph Constructor (GGC), Graph-conditioned Linear Executor (GLE), Periodic Graph Repair (PGR), and Hierarchical Block Router (HBR).
+The architecture consists of four principal operators: Global Graph Constructor (GGC), Graph-conditioned Linear Executor (GLE), Periodic Graph Repair (PGR), and Hierarchical Block Router (HBR). Together they implement the same contract as a reactive frontend runtime: compile structure, execute along dependencies, skip stable regions, and persist objects rather than a full visual (or here, token-level) dump.
+
+The mapping from React / Vue to SOGR is:
+
+| Reactive UI runtime | SOGR |
+|---|---|
+| Source / template | Token sequence \(X\) |
+| Compile to VDOM or reactive graph | GGC constructs \(G=(V,E,A)\) |
+| Component tree and typed edges | Semantic objects and typed relations |
+| State write dirties dependents | Version bump; dirty set \(I=\mathrm{Desc}_G(\Delta)\cup\Delta\) |
+| Skip unchanged subtrees | HBR skips stable blocks |
+| Re-render the dirty region | GLE on \(I\) |
+| Persist component state, not pixels | Persist \(S\) and \(C\), not raw KV |
+| Renderer is replaceable | Model \(\phi\) is replaceable via \(\mathrm{Lift}_\phi(C,S)\) |
+
+The intended control flow is a loop, not a one-shot parse:
+
+1. **GGC** reads \(X\) (and optionally a previous graph) and emits or patches \(G\). This step is expensive and infrequent.
+2. For \(k = 1,\ldots,K\): **HBR** marks stable blocks; **GLE** updates hidden states only along graph-supported edges in the active region; the structured cache records versions.
+3. If \(|I|\) exceeds a safety threshold, or after \(K\) linear steps, **PGR** repairs \(G\) (add, drop, split, merge, reweight, or confirm).
+4. Decoding or an external edit produces a new \(\Delta\). Invalidation is structural: recompute \(I\), not the whole sequence, unless PGR is forced.
+
+![Figure 1. Overview of the proposed SOGR runtime.](figures/fig1-runtime.png)
 
 ### 4.1 Global Graph Constructor
 
-A full-attention or otherwise high-capacity module examines the current state and proposes graph nodes and weighted relations. The expensive operation is intentionally low-frequency. It is not assumed that one graph remains correct indefinitely.
+A full-attention or otherwise high-capacity module examines the current state and proposes graph nodes and weighted relations. The expensive operation is intentionally low-frequency. It is not assumed that one graph remains correct indefinitely. GGC is the analogue of compiling a view tree: it is allowed to be quadratic in \(L\) because its cost is amortized over \(K\) subsequent linear steps. If GGC must run nearly every layer, the architecture collapses to a costly hybrid attention model and the hypothesis fails.
 
 ### 4.2 Graph-conditioned Linear Executor
 
@@ -60,19 +83,23 @@ Given \(G\), a linear operator propagates state only along graph-supported relat
 h'_i = U h_i + \sum_{j \in N(i)} w_{ij} V_{r_{ij}} h_j,
 \]
 
-followed by a gated state update. The implementation can use gated linear attention, delta-rule memory, SSM-like state transitions, or another linear-time mechanism. The architecture therefore does not depend on one particular linear-attention formulation.
+followed by a gated state update. Neighbors \(N(i)\) are the graph neighborhood, not the full length-\(L\) sequence. Relation-specific maps \(V_{r_{ij}}\) allow different edge types (coreference versus causation versus parent/child) to mix information differently, analogous to typed props versus generic parent–child links in a UI tree.
+
+The implementation can use gated linear attention, delta-rule memory, SSM-like state transitions, or another linear-time mechanism. The architecture therefore does not depend on one particular linear-attention formulation. The invariant is that high-frequency work **executes** \(G\) rather than rediscovering \(G\).
 
 ### 4.3 Periodic Graph Repair
 
-After \(K\) linear execution steps, a global module re-evaluates the graph. It may add edges, remove stale edges, alter weights, split nodes, merge nodes, or simply confirm that the current structure remains valid. This is the mechanism intended to address the finite-state and retrieval limitations of purely linear models.
+After \(K\) linear execution steps, a global module re-evaluates the graph. It may add edges, remove stale edges, alter weights, split nodes, merge nodes, or simply confirm that the current structure remains valid. This is the mechanism intended to address the finite-state and retrieval limitations of purely linear models, and the analogue of a full re-render or a React reconciliation when local dirty tracking is no longer trustworthy (for example after a discourse shift that creates new long-range links).
 
 ### 4.4 Hierarchical Block Router
 
-Tokens are grouped into blocks. Each block maintains a compact summary \(z_b\) and a change indicator \(\Delta_b\). If a new query or upstream state has sufficiently low interaction with a stable block, the block can bypass fine-grained computation. The routing unit is intentionally block-sized because contiguous block execution is more hardware-friendly than arbitrary token-level sparsity.
+Tokens are grouped into blocks. Each block maintains a compact summary \(z_b\) and a change indicator \(\Delta_b\). If a new query or upstream state has sufficiently low interaction with a stable block, the block can bypass fine-grained computation. The routing unit is intentionally block-sized because contiguous block execution is more hardware-friendly than arbitrary token-level sparsity. Semantic sparsity that cannot be packed into blocks may still be theoretically sparse and practically slower than dense attention; HBR is therefore part of the hypothesis, not an optional kernel trick.
 
 ### 4.5 Structured Cache
 
 The cache stores node states, edge states, block summaries, and dependency versions. A change to node \(i\) increments its version and invalidates only descendants or dependents reachable through the graph. Cache validity is therefore structural rather than purely positional. Internally, this cache is the incremental-computation store. Externally, only a subset of it is a candidate for client-side persistence, as defined next.
+
+![Figure 2. Example semantic dependency graph. A change to one person node invalidates dependents rather than the entire sequence.](figures/fig2-example-graph.png)
 
 ## 5. Portable Structured Cache
 
