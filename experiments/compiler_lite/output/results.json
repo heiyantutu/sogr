@@ -1,0 +1,340 @@
+{
+  "models": [
+    "Qwen/Qwen2.5-0.5B-Instruct",
+    "Qwen/Qwen2-0.5B-Instruct"
+  ],
+  "summary": {
+    "by_model": {
+      "Qwen/Qwen2-0.5B-Instruct": {
+        "text": {
+          "n": 6,
+          "hits": 6,
+          "acc": 1.0,
+          "seconds": 5.4
+        },
+        "sog": {
+          "n": 6,
+          "hits": 3,
+          "acc": 0.5,
+          "seconds": 82.9
+        },
+        "gap_sog_minus_text": -0.5
+      },
+      "Qwen/Qwen2.5-0.5B-Instruct": {
+        "text": {
+          "n": 6,
+          "hits": 6,
+          "acc": 1.0,
+          "seconds": 4.7
+        },
+        "sog": {
+          "n": 6,
+          "hits": 3,
+          "acc": 0.5,
+          "seconds": 86.2
+        },
+        "gap_sog_minus_text": -0.5
+      }
+    },
+    "paired": {
+      "both_hit": 6,
+      "text_only": 6,
+      "sog_only": 0,
+      "neither": 0
+    }
+  },
+  "rows": [
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q1",
+      "question": "Who bought the laptop?",
+      "gold": [
+        "alice"
+      ],
+      "condition": "text",
+      "answer": "Alice",
+      "hit": true,
+      "seconds": 0.74
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q1",
+      "question": "Who bought the laptop?",
+      "gold": [
+        "alice"
+      ],
+      "condition": "sog",
+      "answer": "Alice",
+      "hit": true,
+      "seconds": 14.06
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q2",
+      "question": "In which city was the laptop purchased?",
+      "gold": [
+        "hangzhou"
+      ],
+      "condition": "text",
+      "answer": "Hangzhou",
+      "hit": true,
+      "seconds": 0.71
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q2",
+      "question": "In which city was the laptop purchased?",
+      "gold": [
+        "hangzhou"
+      ],
+      "condition": "sog",
+      "answer": "Hangzhou",
+      "hit": true,
+      "seconds": 13.99
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q3",
+      "question": "Why did Alice buy a laptop?",
+      "gold": [
+        "failed",
+        "old computer"
+      ],
+      "condition": "text",
+      "answer": "because her old computer failed",
+      "hit": true,
+      "seconds": 1.16
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q3",
+      "question": "Why did Alice buy a laptop?",
+      "gold": [
+        "failed",
+        "old computer"
+      ],
+      "condition": "sog",
+      "answer": "Because she asked if there was a new machine that could be replaced and upgraded to the same design software.",
+      "hit": false,
+      "seconds": 17.33
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q4",
+      "question": "Who works in Shanghai?",
+      "gold": [
+        "bob"
+      ],
+      "condition": "text",
+      "answer": "Bob",
+      "hit": true,
+      "seconds": 0.6
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q4",
+      "question": "Who works in Shanghai?",
+      "gold": [
+        "bob"
+      ],
+      "condition": "sog",
+      "answer": "Alice",
+      "hit": false,
+      "seconds": 13.78
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q5",
+      "question": "Near which landmark was the laptop delivered?",
+      "gold": [
+        "west lake"
+      ],
+      "condition": "text",
+      "answer": "West Lake",
+      "hit": true,
+      "seconds": 0.74
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q5",
+      "question": "Near which landmark was the laptop delivered?",
+      "gold": [
+        "west lake"
+      ],
+      "condition": "sog",
+      "answer": "n39:office near",
+      "hit": false,
+      "seconds": 13.52
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q6",
+      "question": "What would happen to the failed computer?",
+      "gold": [
+        "recycl"
+      ],
+      "condition": "text",
+      "answer": "recycled",
+      "hit": true,
+      "seconds": 0.74
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "qid": "q6",
+      "question": "What would happen to the failed computer?",
+      "gold": [
+        "recycl"
+      ],
+      "condition": "sog",
+      "answer": "The failed computer would be recycled.",
+      "hit": true,
+      "seconds": 13.53
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q1",
+      "question": "Who bought the laptop?",
+      "gold": [
+        "alice"
+      ],
+      "condition": "text",
+      "answer": "Alice",
+      "hit": true,
+      "seconds": 0.65
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q1",
+      "question": "Who bought the laptop?",
+      "gold": [
+        "alice"
+      ],
+      "condition": "sog",
+      "answer": "n1",
+      "hit": false,
+      "seconds": 13.35
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q2",
+      "question": "In which city was the laptop purchased?",
+      "gold": [
+        "hangzhou"
+      ],
+      "condition": "text",
+      "answer": "Hangzhou",
+      "hit": true,
+      "seconds": 0.78
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q2",
+      "question": "In which city was the laptop purchased?",
+      "gold": [
+        "hangzhou"
+      ],
+      "condition": "sog",
+      "answer": "Hangzhou",
+      "hit": true,
+      "seconds": 13.6
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q3",
+      "question": "Why did Alice buy a laptop?",
+      "gold": [
+        "failed",
+        "old computer"
+      ],
+      "condition": "text",
+      "answer": "Because her old computer failed.",
+      "hit": true,
+      "seconds": 1.38
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q3",
+      "question": "Why did Alice buy a laptop?",
+      "gold": [
+        "failed",
+        "old computer"
+      ],
+      "condition": "sog",
+      "answer": "Alice bought a laptop because she wanted to replace an old computer that had failed.",
+      "hit": true,
+      "seconds": 15.8
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q4",
+      "question": "Who works in Shanghai?",
+      "gold": [
+        "bob"
+      ],
+      "condition": "text",
+      "answer": "Bob",
+      "hit": true,
+      "seconds": 0.64
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q4",
+      "question": "Who works in Shanghai?",
+      "gold": [
+        "bob"
+      ],
+      "condition": "sog",
+      "answer": "n12",
+      "hit": false,
+      "seconds": 13.4
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q5",
+      "question": "Near which landmark was the laptop delivered?",
+      "gold": [
+        "west lake"
+      ],
+      "condition": "text",
+      "answer": "West Lake",
+      "hit": true,
+      "seconds": 0.77
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q5",
+      "question": "Near which landmark was the laptop delivered?",
+      "gold": [
+        "west lake"
+      ],
+      "condition": "sog",
+      "answer": "n3",
+      "hit": false,
+      "seconds": 13.12
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q6",
+      "question": "What would happen to the failed computer?",
+      "gold": [
+        "recycl"
+      ],
+      "condition": "text",
+      "answer": "It would be recycled.",
+      "hit": true,
+      "seconds": 1.22
+    },
+    {
+      "model": "Qwen/Qwen2-0.5B-Instruct",
+      "qid": "q6",
+      "question": "What would happen to the failed computer?",
+      "gold": [
+        "recycl"
+      ],
+      "condition": "sog",
+      "answer": "The failed computer would be recycled.",
+      "hit": true,
+      "seconds": 13.6
+    }
+  ]
+}

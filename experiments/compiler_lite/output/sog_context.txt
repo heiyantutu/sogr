@@ -1,0 +1,174 @@
+# Semantic Object Graph
+
+## Nodes
+- n0 [entity] Alice
+- n1 [phrase] bought
+- n2 [phrase] laptop
+- n3 [entity] Hangzhou
+- n4 [phrase] old computer failed
+- n5 [phrase] laptop
+- n6 [phrase] delivered
+- n7 [phrase] office near
+- n8 [entity] West Lake
+- n9 [phrase] two days later
+- n10 [entity] Bob
+- n11 [phrase] who works
+- n12 [entity] Shanghai
+- n13 [phrase] called
+- n14 [entity] Alice
+- n15 [phrase] ask whether
+- n16 [phrase] new machine could
+- n17 [phrase] run
+- n18 [phrase] same design software
+- n19 [entity] Alice
+- n20 [phrase] said
+- n21 [entity] Hangzhou
+- n22 [phrase] purchase
+- n23 [phrase] only
+- n24 [phrase] replacement
+- n25 [phrase] upgrade
+- n26 [phrase] failed computer would
+- n27 [phrase] recycled
+- n28 [entity] Meanwhile
+- n29 [phrase] office network still
+- n30 [phrase] listed
+- n31 [phrase] old computer
+- n32 [phrase] primary workstation
+- n33 [entity] When Bob
+- n34 [phrase] visited
+- n35 [entity] Hangzhou
+- n36 [phrase] next week
+- n37 [entity] Alice
+- n38 [phrase] showed him
+- n39 [phrase] laptop
+- n40 [phrase] recycling receipt
+- n41 [phrase] causal chain
+- n42 [phrase] local
+- n43 [phrase] failure
+- n44 [entity] Hangzhou
+- n45 [phrase] caused
+- n46 [phrase] purchase
+- n47 [phrase] purchase caused
+- n48 [phrase] delivery
+- n49 [phrase] delivery caused
+- n50 [phrase] office inventory
+- n51 [phrase] become stale until
+- n52 [entity] Alice
+- n53 [phrase] updated
+
+## Edges (src is depended on, dst needs update)
+- n0:Alice -> n1:bought (0.84412)
+- n0:Alice -> n2:laptop (0.63884)
+- n1:bought -> n2:laptop (0.12724)
+- n0:Alice -> n3:Hangzhou (0.6088)
+- n1:bought -> n3:Hangzhou (0.04632)
+- n2:laptop -> n3:Hangzhou (0.04074)
+- n0:Alice -> n4:old computer failed (0.52822)
+- n2:laptop -> n4:old computer failed (0.03309)
+- n1:bought -> n4:old computer failed (0.02821)
+- n0:Alice -> n5:laptop (0.47757)
+- n2:laptop -> n5:laptop (0.0437)
+- n0:Alice -> n6:delivered (0.45716)
+- n5:laptop -> n6:delivered (0.05782)
+- n0:Alice -> n7:office near (0.46974)
+- n6:delivered -> n7:office near (0.04332)
+- n0:Alice -> n8:West Lake (0.53518)
+- n7:office near -> n8:West Lake (0.05981)
+- n0:Alice -> n9:two days later (0.46022)
+- n7:office near -> n9:two days later (0.03354)
+- n6:delivered -> n9:two days later (0.0311)
+- n8:West Lake -> n9:two days later (0.02927)
+- n0:Alice -> n10:Bob (0.54034)
+- n0:Alice -> n11:who works (0.47519)
+- n10:Bob -> n11:who works (0.05129)
+- n0:Alice -> n12:Shanghai (0.43084)
+- n11:who works -> n12:Shanghai (0.04496)
+- n0:Alice -> n13:called (0.38839)
+- n10:Bob -> n13:called (0.04183)
+- n11:who works -> n13:called (0.03379)
+- n12:Shanghai -> n13:called (0.02566)
+- n0:Alice -> n14:Alice (0.44745)
+- n13:called -> n14:Alice (0.12111)
+- n0:Alice -> n15:ask whether (0.35566)
+- n14:Alice -> n15:ask whether (0.05757)
+- n13:called -> n15:ask whether (0.0352)
+- n0:Alice -> n16:new machine could (0.38047)
+- n15:ask whether -> n16:new machine could (0.04073)
+- n0:Alice -> n17:run (0.39912)
+- n16:new machine could -> n17:run (0.05455)
+- n0:Alice -> n18:same design software (0.36903)
+- n17:run -> n18:same design software (0.06895)
+- n16:new machine could -> n18:same design software (0.03023)
+- n0:Alice -> n19:Alice (0.35434)
+- n14:Alice -> n19:Alice (0.03036)
+- n0:Alice -> n20:said (0.33943)
+- n19:Alice -> n20:said (0.07882)
+- n14:Alice -> n20:said (0.02862)
+- n0:Alice -> n21:Hangzhou (0.37578)
+- n20:said -> n21:Hangzhou (0.04461)
+- n3:Hangzhou -> n21:Hangzhou (0.02945)
+- n0:Alice -> n22:purchase (0.37995)
+- n20:said -> n22:purchase (0.05128)
+- n21:Hangzhou -> n22:purchase (0.04033)
+- n0:Alice -> n23:only (0.36732)
+- n22:purchase -> n23:only (0.05082)
+- n0:Alice -> n24:replacement (0.34605)
+- n23:only -> n24:replacement (0.05529)
+- n22:purchase -> n24:replacement (0.02986)
+- n0:Alice -> n25:upgrade (0.34469)
+- n24:replacement -> n25:upgrade (0.02651)
+- n0:Alice -> n26:failed computer would (0.29582)
+- n0:Alice -> n27:recycled (0.43898)
+- n0:Alice -> n28:Meanwhile (0.3585)
+- n0:Alice -> n29:office network still (0.35503)
+- n28:Meanwhile -> n29:office network still (0.053)
+- n0:Alice -> n30:listed (0.32556)
+- n29:office network still -> n30:listed (0.05552)
+- n28:Meanwhile -> n30:listed (0.03028)
+- n0:Alice -> n31:old computer (0.23744)
+- n30:listed -> n31:old computer (0.07533)
+- n0:Alice -> n32:primary workstation (0.33327)
+- n0:Alice -> n33:When Bob (0.32452)
+- n0:Alice -> n34:visited (0.29562)
+- n33:When Bob -> n34:visited (0.07458)
+- n0:Alice -> n35:Hangzhou (0.32421)
+- n34:visited -> n35:Hangzhou (0.10833)
+- n33:When Bob -> n35:Hangzhou (0.03455)
+- n0:Alice -> n36:next week (0.31386)
+- n34:visited -> n36:next week (0.06124)
+- n33:When Bob -> n36:next week (0.02664)
+- n0:Alice -> n37:Alice (0.27131)
+- n34:visited -> n37:Alice (0.03671)
+- n0:Alice -> n38:showed him (0.3446)
+- n37:Alice -> n38:showed him (0.04324)
+- n0:Alice -> n39:laptop (0.25783)
+- n38:showed him -> n39:laptop (0.04855)
+- n0:Alice -> n40:recycling receipt (0.33853)
+- n0:Alice -> n41:causal chain (0.41074)
+- n0:Alice -> n42:local (0.37299)
+- n41:causal chain -> n42:local (0.04508)
+- n0:Alice -> n43:failure (0.3192)
+- n0:Alice -> n44:Hangzhou (0.29004)
+- n43:failure -> n44:Hangzhou (0.03145)
+- n0:Alice -> n45:caused (0.26954)
+- n44:Hangzhou -> n45:caused (0.02969)
+- n43:failure -> n45:caused (0.02916)
+- n0:Alice -> n46:purchase (0.2805)
+- n45:caused -> n46:purchase (0.09446)
+- n22:purchase -> n46:purchase (0.02557)
+- n0:Alice -> n47:purchase caused (0.24035)
+- n45:caused -> n47:purchase caused (0.03901)
+- n46:purchase -> n47:purchase caused (0.02718)
+- n0:Alice -> n48:delivery (0.30481)
+- n47:purchase caused -> n48:delivery (0.04916)
+- n0:Alice -> n49:delivery caused (0.21786)
+- n48:delivery -> n49:delivery caused (0.033)
+- n0:Alice -> n50:office inventory (0.26512)
+- n49:delivery caused -> n50:office inventory (0.04594)
+- n0:Alice -> n51:become stale until (0.30601)
+- n50:office inventory -> n51:become stale until (0.03321)
+- n0:Alice -> n52:Alice (0.25823)
+- n51:become stale until -> n52:Alice (0.06062)
+- n0:Alice -> n53:updated (0.2825)
+- n52:Alice -> n53:updated (0.05102)
+- n51:become stale until -> n53:updated (0.02575)

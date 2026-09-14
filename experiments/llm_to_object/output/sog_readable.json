@@ -1,0 +1,1188 @@
+{
+  "schema": "sogr.sog.v0",
+  "layers": {
+    "S": "structure: typed nodes and attention edges",
+    "C": "canonical: model-free hashed bag-of-words",
+    "H": "model state: DistilGPT-2 span mean (preview only)"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "type": "entity",
+      "text": "Alice",
+      "span": [
+        0,
+        5
+      ]
+    },
+    {
+      "id": "n1",
+      "type": "phrase",
+      "text": "bought",
+      "span": [
+        6,
+        12
+      ]
+    },
+    {
+      "id": "n2",
+      "type": "phrase",
+      "text": "laptop",
+      "span": [
+        15,
+        21
+      ]
+    },
+    {
+      "id": "n3",
+      "type": "entity",
+      "text": "Hangzhou",
+      "span": [
+        25,
+        33
+      ]
+    },
+    {
+      "id": "n4",
+      "type": "phrase",
+      "text": "old computer failed",
+      "span": [
+        46,
+        65
+      ]
+    },
+    {
+      "id": "n5",
+      "type": "phrase",
+      "text": "laptop",
+      "span": [
+        71,
+        77
+      ]
+    },
+    {
+      "id": "n6",
+      "type": "phrase",
+      "text": "delivered",
+      "span": [
+        82,
+        91
+      ]
+    },
+    {
+      "id": "n7",
+      "type": "phrase",
+      "text": "office near",
+      "span": [
+        99,
+        110
+      ]
+    },
+    {
+      "id": "n8",
+      "type": "entity",
+      "text": "West Lake",
+      "span": [
+        111,
+        120
+      ]
+    },
+    {
+      "id": "n9",
+      "type": "phrase",
+      "text": "two days later",
+      "span": [
+        121,
+        135
+      ]
+    },
+    {
+      "id": "n10",
+      "type": "entity",
+      "text": "Bob",
+      "span": [
+        137,
+        140
+      ]
+    },
+    {
+      "id": "n11",
+      "type": "phrase",
+      "text": "who works",
+      "span": [
+        142,
+        151
+      ]
+    },
+    {
+      "id": "n12",
+      "type": "entity",
+      "text": "Shanghai",
+      "span": [
+        155,
+        163
+      ]
+    },
+    {
+      "id": "n13",
+      "type": "phrase",
+      "text": "called",
+      "span": [
+        165,
+        171
+      ]
+    },
+    {
+      "id": "n14",
+      "type": "entity",
+      "text": "Alice",
+      "span": [
+        172,
+        177
+      ]
+    },
+    {
+      "id": "n15",
+      "type": "phrase",
+      "text": "ask whether",
+      "span": [
+        181,
+        192
+      ]
+    },
+    {
+      "id": "n16",
+      "type": "phrase",
+      "text": "new machine\ncould",
+      "span": [
+        197,
+        214
+      ]
+    },
+    {
+      "id": "n17",
+      "type": "phrase",
+      "text": "run",
+      "span": [
+        215,
+        218
+      ]
+    },
+    {
+      "id": "n18",
+      "type": "phrase",
+      "text": "same design software",
+      "span": [
+        223,
+        243
+      ]
+    },
+    {
+      "id": "n19",
+      "type": "entity",
+      "text": "Alice",
+      "span": [
+        245,
+        250
+      ]
+    },
+    {
+      "id": "n20",
+      "type": "phrase",
+      "text": "said",
+      "span": [
+        251,
+        255
+      ]
+    },
+    {
+      "id": "n21",
+      "type": "entity",
+      "text": "Hangzhou",
+      "span": [
+        260,
+        268
+      ]
+    },
+    {
+      "id": "n22",
+      "type": "phrase",
+      "text": "purchase",
+      "span": [
+        269,
+        277
+      ]
+    },
+    {
+      "id": "n23",
+      "type": "phrase",
+      "text": "only",
+      "span": [
+        282,
+        286
+      ]
+    },
+    {
+      "id": "n24",
+      "type": "phrase",
+      "text": "replacement",
+      "span": [
+        289,
+        300
+      ]
+    },
+    {
+      "id": "n25",
+      "type": "phrase",
+      "text": "upgrade",
+      "span": [
+        309,
+        316
+      ]
+    },
+    {
+      "id": "n26",
+      "type": "phrase",
+      "text": "failed computer would",
+      "span": [
+        331,
+        352
+      ]
+    },
+    {
+      "id": "n27",
+      "type": "phrase",
+      "text": "recycled",
+      "span": [
+        356,
+        364
+      ]
+    },
+    {
+      "id": "n28",
+      "type": "entity",
+      "text": "Meanwhile",
+      "span": [
+        366,
+        375
+      ]
+    },
+    {
+      "id": "n29",
+      "type": "phrase",
+      "text": "office network still",
+      "span": [
+        380,
+        400
+      ]
+    },
+    {
+      "id": "n30",
+      "type": "phrase",
+      "text": "listed",
+      "span": [
+        401,
+        407
+      ]
+    },
+    {
+      "id": "n31",
+      "type": "phrase",
+      "text": "old computer",
+      "span": [
+        412,
+        424
+      ]
+    },
+    {
+      "id": "n32",
+      "type": "phrase",
+      "text": "primary workstation",
+      "span": [
+        432,
+        451
+      ]
+    },
+    {
+      "id": "n33",
+      "type": "entity",
+      "text": "When Bob",
+      "span": [
+        453,
+        461
+      ]
+    },
+    {
+      "id": "n34",
+      "type": "phrase",
+      "text": "visited",
+      "span": [
+        462,
+        469
+      ]
+    },
+    {
+      "id": "n35",
+      "type": "entity",
+      "text": "Hangzhou",
+      "span": [
+        470,
+        478
+      ]
+    },
+    {
+      "id": "n36",
+      "type": "phrase",
+      "text": "next week",
+      "span": [
+        483,
+        492
+      ]
+    },
+    {
+      "id": "n37",
+      "type": "entity",
+      "text": "Alice",
+      "span": [
+        494,
+        499
+      ]
+    },
+    {
+      "id": "n38",
+      "type": "phrase",
+      "text": "showed\nhim",
+      "span": [
+        500,
+        510
+      ]
+    },
+    {
+      "id": "n39",
+      "type": "phrase",
+      "text": "laptop",
+      "span": [
+        515,
+        521
+      ]
+    },
+    {
+      "id": "n40",
+      "type": "phrase",
+      "text": "recycling receipt",
+      "span": [
+        530,
+        547
+      ]
+    },
+    {
+      "id": "n41",
+      "type": "phrase",
+      "text": "causal chain",
+      "span": [
+        553,
+        565
+      ]
+    },
+    {
+      "id": "n42",
+      "type": "phrase",
+      "text": "local",
+      "span": [
+        569,
+        574
+      ]
+    },
+    {
+      "id": "n43",
+      "type": "phrase",
+      "text": "failure",
+      "span": [
+        580,
+        587
+      ]
+    },
+    {
+      "id": "n44",
+      "type": "entity",
+      "text": "Hangzhou",
+      "span": [
+        591,
+        599
+      ]
+    },
+    {
+      "id": "n45",
+      "type": "phrase",
+      "text": "caused",
+      "span": [
+        600,
+        606
+      ]
+    },
+    {
+      "id": "n46",
+      "type": "phrase",
+      "text": "purchase",
+      "span": [
+        611,
+        619
+      ]
+    },
+    {
+      "id": "n47",
+      "type": "phrase",
+      "text": "purchase caused",
+      "span": [
+        625,
+        640
+      ]
+    },
+    {
+      "id": "n48",
+      "type": "phrase",
+      "text": "delivery",
+      "span": [
+        645,
+        653
+      ]
+    },
+    {
+      "id": "n49",
+      "type": "phrase",
+      "text": "delivery caused",
+      "span": [
+        663,
+        678
+      ]
+    },
+    {
+      "id": "n50",
+      "type": "phrase",
+      "text": "office inventory",
+      "span": [
+        683,
+        699
+      ]
+    },
+    {
+      "id": "n51",
+      "type": "phrase",
+      "text": "become stale until",
+      "span": [
+        703,
+        721
+      ]
+    },
+    {
+      "id": "n52",
+      "type": "entity",
+      "text": "Alice",
+      "span": [
+        722,
+        727
+      ]
+    },
+    {
+      "id": "n53",
+      "type": "phrase",
+      "text": "updated",
+      "span": [
+        728,
+        735
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "src": "n0",
+      "dst": "n1",
+      "type": "depends_on",
+      "weight": 0.84412
+    },
+    {
+      "src": "n0",
+      "dst": "n2",
+      "type": "depends_on",
+      "weight": 0.63884
+    },
+    {
+      "src": "n1",
+      "dst": "n2",
+      "type": "depends_on",
+      "weight": 0.12724
+    },
+    {
+      "src": "n0",
+      "dst": "n3",
+      "type": "depends_on",
+      "weight": 0.6088
+    },
+    {
+      "src": "n1",
+      "dst": "n3",
+      "type": "depends_on",
+      "weight": 0.04632
+    },
+    {
+      "src": "n2",
+      "dst": "n3",
+      "type": "depends_on",
+      "weight": 0.04074
+    },
+    {
+      "src": "n0",
+      "dst": "n4",
+      "type": "depends_on",
+      "weight": 0.52822
+    },
+    {
+      "src": "n2",
+      "dst": "n4",
+      "type": "depends_on",
+      "weight": 0.03309
+    },
+    {
+      "src": "n1",
+      "dst": "n4",
+      "type": "depends_on",
+      "weight": 0.02821
+    },
+    {
+      "src": "n0",
+      "dst": "n5",
+      "type": "depends_on",
+      "weight": 0.47757
+    },
+    {
+      "src": "n2",
+      "dst": "n5",
+      "type": "depends_on",
+      "weight": 0.0437
+    },
+    {
+      "src": "n0",
+      "dst": "n6",
+      "type": "depends_on",
+      "weight": 0.45716
+    },
+    {
+      "src": "n5",
+      "dst": "n6",
+      "type": "depends_on",
+      "weight": 0.05782
+    },
+    {
+      "src": "n0",
+      "dst": "n7",
+      "type": "depends_on",
+      "weight": 0.46974
+    },
+    {
+      "src": "n6",
+      "dst": "n7",
+      "type": "depends_on",
+      "weight": 0.04332
+    },
+    {
+      "src": "n0",
+      "dst": "n8",
+      "type": "depends_on",
+      "weight": 0.53518
+    },
+    {
+      "src": "n7",
+      "dst": "n8",
+      "type": "depends_on",
+      "weight": 0.05981
+    },
+    {
+      "src": "n0",
+      "dst": "n9",
+      "type": "depends_on",
+      "weight": 0.46022
+    },
+    {
+      "src": "n7",
+      "dst": "n9",
+      "type": "depends_on",
+      "weight": 0.03354
+    },
+    {
+      "src": "n6",
+      "dst": "n9",
+      "type": "depends_on",
+      "weight": 0.0311
+    },
+    {
+      "src": "n8",
+      "dst": "n9",
+      "type": "depends_on",
+      "weight": 0.02927
+    },
+    {
+      "src": "n0",
+      "dst": "n10",
+      "type": "depends_on",
+      "weight": 0.54034
+    },
+    {
+      "src": "n0",
+      "dst": "n11",
+      "type": "depends_on",
+      "weight": 0.47519
+    },
+    {
+      "src": "n10",
+      "dst": "n11",
+      "type": "depends_on",
+      "weight": 0.05129
+    },
+    {
+      "src": "n0",
+      "dst": "n12",
+      "type": "depends_on",
+      "weight": 0.43084
+    },
+    {
+      "src": "n11",
+      "dst": "n12",
+      "type": "depends_on",
+      "weight": 0.04496
+    },
+    {
+      "src": "n0",
+      "dst": "n13",
+      "type": "depends_on",
+      "weight": 0.38839
+    },
+    {
+      "src": "n10",
+      "dst": "n13",
+      "type": "depends_on",
+      "weight": 0.04183
+    },
+    {
+      "src": "n11",
+      "dst": "n13",
+      "type": "depends_on",
+      "weight": 0.03379
+    },
+    {
+      "src": "n12",
+      "dst": "n13",
+      "type": "depends_on",
+      "weight": 0.02566
+    },
+    {
+      "src": "n0",
+      "dst": "n14",
+      "type": "depends_on",
+      "weight": 0.44745
+    },
+    {
+      "src": "n13",
+      "dst": "n14",
+      "type": "depends_on",
+      "weight": 0.12111
+    },
+    {
+      "src": "n0",
+      "dst": "n15",
+      "type": "depends_on",
+      "weight": 0.35566
+    },
+    {
+      "src": "n14",
+      "dst": "n15",
+      "type": "depends_on",
+      "weight": 0.05757
+    },
+    {
+      "src": "n13",
+      "dst": "n15",
+      "type": "depends_on",
+      "weight": 0.0352
+    },
+    {
+      "src": "n0",
+      "dst": "n16",
+      "type": "depends_on",
+      "weight": 0.38047
+    },
+    {
+      "src": "n15",
+      "dst": "n16",
+      "type": "depends_on",
+      "weight": 0.04073
+    },
+    {
+      "src": "n0",
+      "dst": "n17",
+      "type": "depends_on",
+      "weight": 0.39912
+    },
+    {
+      "src": "n16",
+      "dst": "n17",
+      "type": "depends_on",
+      "weight": 0.05455
+    },
+    {
+      "src": "n0",
+      "dst": "n18",
+      "type": "depends_on",
+      "weight": 0.36903
+    },
+    {
+      "src": "n17",
+      "dst": "n18",
+      "type": "depends_on",
+      "weight": 0.06895
+    },
+    {
+      "src": "n16",
+      "dst": "n18",
+      "type": "depends_on",
+      "weight": 0.03023
+    },
+    {
+      "src": "n0",
+      "dst": "n19",
+      "type": "depends_on",
+      "weight": 0.35434
+    },
+    {
+      "src": "n14",
+      "dst": "n19",
+      "type": "depends_on",
+      "weight": 0.03036
+    },
+    {
+      "src": "n0",
+      "dst": "n20",
+      "type": "depends_on",
+      "weight": 0.33943
+    },
+    {
+      "src": "n19",
+      "dst": "n20",
+      "type": "depends_on",
+      "weight": 0.07882
+    },
+    {
+      "src": "n14",
+      "dst": "n20",
+      "type": "depends_on",
+      "weight": 0.02862
+    },
+    {
+      "src": "n0",
+      "dst": "n21",
+      "type": "depends_on",
+      "weight": 0.37578
+    },
+    {
+      "src": "n20",
+      "dst": "n21",
+      "type": "depends_on",
+      "weight": 0.04461
+    },
+    {
+      "src": "n3",
+      "dst": "n21",
+      "type": "depends_on",
+      "weight": 0.02945
+    },
+    {
+      "src": "n0",
+      "dst": "n22",
+      "type": "depends_on",
+      "weight": 0.37995
+    },
+    {
+      "src": "n20",
+      "dst": "n22",
+      "type": "depends_on",
+      "weight": 0.05128
+    },
+    {
+      "src": "n21",
+      "dst": "n22",
+      "type": "depends_on",
+      "weight": 0.04033
+    },
+    {
+      "src": "n0",
+      "dst": "n23",
+      "type": "depends_on",
+      "weight": 0.36732
+    },
+    {
+      "src": "n22",
+      "dst": "n23",
+      "type": "depends_on",
+      "weight": 0.05082
+    },
+    {
+      "src": "n0",
+      "dst": "n24",
+      "type": "depends_on",
+      "weight": 0.34605
+    },
+    {
+      "src": "n23",
+      "dst": "n24",
+      "type": "depends_on",
+      "weight": 0.05529
+    },
+    {
+      "src": "n22",
+      "dst": "n24",
+      "type": "depends_on",
+      "weight": 0.02986
+    },
+    {
+      "src": "n0",
+      "dst": "n25",
+      "type": "depends_on",
+      "weight": 0.34469
+    },
+    {
+      "src": "n24",
+      "dst": "n25",
+      "type": "depends_on",
+      "weight": 0.02651
+    },
+    {
+      "src": "n0",
+      "dst": "n26",
+      "type": "depends_on",
+      "weight": 0.29582
+    },
+    {
+      "src": "n0",
+      "dst": "n27",
+      "type": "depends_on",
+      "weight": 0.43898
+    },
+    {
+      "src": "n0",
+      "dst": "n28",
+      "type": "depends_on",
+      "weight": 0.3585
+    },
+    {
+      "src": "n0",
+      "dst": "n29",
+      "type": "depends_on",
+      "weight": 0.35503
+    },
+    {
+      "src": "n28",
+      "dst": "n29",
+      "type": "depends_on",
+      "weight": 0.053
+    },
+    {
+      "src": "n0",
+      "dst": "n30",
+      "type": "depends_on",
+      "weight": 0.32556
+    },
+    {
+      "src": "n29",
+      "dst": "n30",
+      "type": "depends_on",
+      "weight": 0.05552
+    },
+    {
+      "src": "n28",
+      "dst": "n30",
+      "type": "depends_on",
+      "weight": 0.03028
+    },
+    {
+      "src": "n0",
+      "dst": "n31",
+      "type": "depends_on",
+      "weight": 0.23744
+    },
+    {
+      "src": "n30",
+      "dst": "n31",
+      "type": "depends_on",
+      "weight": 0.07533
+    },
+    {
+      "src": "n0",
+      "dst": "n32",
+      "type": "depends_on",
+      "weight": 0.33327
+    },
+    {
+      "src": "n0",
+      "dst": "n33",
+      "type": "depends_on",
+      "weight": 0.32452
+    },
+    {
+      "src": "n0",
+      "dst": "n34",
+      "type": "depends_on",
+      "weight": 0.29562
+    },
+    {
+      "src": "n33",
+      "dst": "n34",
+      "type": "depends_on",
+      "weight": 0.07458
+    },
+    {
+      "src": "n0",
+      "dst": "n35",
+      "type": "depends_on",
+      "weight": 0.32421
+    },
+    {
+      "src": "n34",
+      "dst": "n35",
+      "type": "depends_on",
+      "weight": 0.10833
+    },
+    {
+      "src": "n33",
+      "dst": "n35",
+      "type": "depends_on",
+      "weight": 0.03455
+    },
+    {
+      "src": "n0",
+      "dst": "n36",
+      "type": "depends_on",
+      "weight": 0.31386
+    },
+    {
+      "src": "n34",
+      "dst": "n36",
+      "type": "depends_on",
+      "weight": 0.06124
+    },
+    {
+      "src": "n33",
+      "dst": "n36",
+      "type": "depends_on",
+      "weight": 0.02664
+    },
+    {
+      "src": "n0",
+      "dst": "n37",
+      "type": "depends_on",
+      "weight": 0.27131
+    },
+    {
+      "src": "n34",
+      "dst": "n37",
+      "type": "depends_on",
+      "weight": 0.03671
+    },
+    {
+      "src": "n0",
+      "dst": "n38",
+      "type": "depends_on",
+      "weight": 0.3446
+    },
+    {
+      "src": "n37",
+      "dst": "n38",
+      "type": "depends_on",
+      "weight": 0.04324
+    },
+    {
+      "src": "n0",
+      "dst": "n39",
+      "type": "depends_on",
+      "weight": 0.25783
+    },
+    {
+      "src": "n38",
+      "dst": "n39",
+      "type": "depends_on",
+      "weight": 0.04855
+    },
+    {
+      "src": "n0",
+      "dst": "n40",
+      "type": "depends_on",
+      "weight": 0.33853
+    },
+    {
+      "src": "n0",
+      "dst": "n41",
+      "type": "depends_on",
+      "weight": 0.41074
+    },
+    {
+      "src": "n0",
+      "dst": "n42",
+      "type": "depends_on",
+      "weight": 0.37299
+    },
+    {
+      "src": "n41",
+      "dst": "n42",
+      "type": "depends_on",
+      "weight": 0.04508
+    },
+    {
+      "src": "n0",
+      "dst": "n43",
+      "type": "depends_on",
+      "weight": 0.3192
+    },
+    {
+      "src": "n0",
+      "dst": "n44",
+      "type": "depends_on",
+      "weight": 0.29004
+    },
+    {
+      "src": "n43",
+      "dst": "n44",
+      "type": "depends_on",
+      "weight": 0.03145
+    },
+    {
+      "src": "n0",
+      "dst": "n45",
+      "type": "depends_on",
+      "weight": 0.26954
+    },
+    {
+      "src": "n44",
+      "dst": "n45",
+      "type": "depends_on",
+      "weight": 0.02969
+    },
+    {
+      "src": "n43",
+      "dst": "n45",
+      "type": "depends_on",
+      "weight": 0.02916
+    },
+    {
+      "src": "n0",
+      "dst": "n46",
+      "type": "depends_on",
+      "weight": 0.2805
+    },
+    {
+      "src": "n45",
+      "dst": "n46",
+      "type": "depends_on",
+      "weight": 0.09446
+    },
+    {
+      "src": "n22",
+      "dst": "n46",
+      "type": "depends_on",
+      "weight": 0.02557
+    },
+    {
+      "src": "n0",
+      "dst": "n47",
+      "type": "depends_on",
+      "weight": 0.24035
+    },
+    {
+      "src": "n45",
+      "dst": "n47",
+      "type": "depends_on",
+      "weight": 0.03901
+    },
+    {
+      "src": "n46",
+      "dst": "n47",
+      "type": "depends_on",
+      "weight": 0.02718
+    },
+    {
+      "src": "n0",
+      "dst": "n48",
+      "type": "depends_on",
+      "weight": 0.30481
+    },
+    {
+      "src": "n47",
+      "dst": "n48",
+      "type": "depends_on",
+      "weight": 0.04916
+    },
+    {
+      "src": "n0",
+      "dst": "n49",
+      "type": "depends_on",
+      "weight": 0.21786
+    },
+    {
+      "src": "n48",
+      "dst": "n49",
+      "type": "depends_on",
+      "weight": 0.033
+    },
+    {
+      "src": "n0",
+      "dst": "n50",
+      "type": "depends_on",
+      "weight": 0.26512
+    },
+    {
+      "src": "n49",
+      "dst": "n50",
+      "type": "depends_on",
+      "weight": 0.04594
+    },
+    {
+      "src": "n0",
+      "dst": "n51",
+      "type": "depends_on",
+      "weight": 0.30601
+    },
+    {
+      "src": "n50",
+      "dst": "n51",
+      "type": "depends_on",
+      "weight": 0.03321
+    },
+    {
+      "src": "n0",
+      "dst": "n52",
+      "type": "depends_on",
+      "weight": 0.25823
+    },
+    {
+      "src": "n51",
+      "dst": "n52",
+      "type": "depends_on",
+      "weight": 0.06062
+    },
+    {
+      "src": "n0",
+      "dst": "n53",
+      "type": "depends_on",
+      "weight": 0.2825
+    },
+    {
+      "src": "n52",
+      "dst": "n53",
+      "type": "depends_on",
+      "weight": 0.05102
+    },
+    {
+      "src": "n51",
+      "dst": "n53",
+      "type": "depends_on",
+      "weight": 0.02575
+    }
+  ]
+}

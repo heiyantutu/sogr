@@ -1,0 +1,50 @@
+{
+  "model": "distilgpt2",
+  "device": "cpu",
+  "tokens": 156,
+  "nodes": 54,
+  "edges": 115,
+  "forward_seconds": 0.104,
+  "kv_cache_bytes": 5750784,
+  "S_bytes": 12952,
+  "S_plus_C_bytes": 31206,
+  "S_C_Hpreview_bytes": 48121,
+  "kv_to_S_ratio": 444.01,
+  "kv_to_SC_ratio": 184.28,
+  "edit": "Shanghai -> Beijing",
+  "seed_dirty_nodes": [
+    "n12"
+  ],
+  "invalidated_nodes_1hop": [
+    "n12",
+    "n13"
+  ],
+  "invalidated_nodes_transitive": [
+    "n12",
+    "n13",
+    "n14",
+    "n15",
+    "n16",
+    "n17",
+    "n18",
+    "n19",
+    "n20",
+    "n21",
+    "n22",
+    "n23",
+    "n24",
+    "n25",
+    "n46",
+    "n47",
+    "n48",
+    "n49",
+    "n50",
+    "n51",
+    "n52",
+    "n53"
+  ],
+  "invalidation_fraction_1hop": 0.037,
+  "invalidation_fraction_transitive": 0.407,
+  "full_prefill_token_fraction": 1.0,
+  "note": "Token invalidation for a full re-prefill is 100% of the sequence. The object invalidation fraction is |Desc(Δ)| / |V|."
+}
