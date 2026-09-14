@@ -1,21 +1,22 @@
-# SOGR: Semantic Object Graph Runtime
+# SOGR: Semantic Object Graph Runtime for LLMs
 
 **Language:** **English** · [简体中文](README.zh.md)
 
 **Paper:** [English Markdown](paper/SOGR.md) · [简体中文 Markdown](paper/SOGR.zh.md) · [PDF](paper/SOGR.pdf)
 
-A Structured Incremental Architecture for Long-Context Language Modeling  
+An **LLM** (large language model) architecture draft: structured incremental computation for long-context Transformers, as an alternative to a dense token-level KV cache.  
 Independent Research Draft · Version 0.3 · September 2026
 
 | | |
 |---|---|
 | **Name** | SOGR (Semantic Object Graph Runtime) |
+| **Field** | LLM · large language model · Transformer · long-context · KV cache |
 | **Author** | Zeping Tu, frontend engineer |
-| **Type** | Research proposal + CPU-laptop baseline |
+| **Type** | LLM research proposal + CPU-laptop baseline |
 | **Not** | A GPU-scale training result or a production LLM |
 | **Repo** | [github.com/heiyantutu/sogr](https://github.com/heiyantutu/sogr) |
 
-**SOGR** is a proposed language-model runtime that treats semantic structure as a **cacheable intermediate representation**. Instead of rediscovering relationships over tokens at every Transformer layer, the model would compile a **Semantic Object Graph (SOG)**, execute along that graph, and recompute only a **dirty dependency subgraph** when something changes.
+**SOGR** is a proposed **LLM runtime** that treats semantic structure as a **cacheable intermediate representation**. Instead of rediscovering relationships over tokens at every Transformer layer, the large language model would compile a **Semantic Object Graph (SOG)**, execute along that graph, and recompute only a **dirty dependency subgraph** when something changes.
 
 The idea comes from **frontend engineering**. **React** and **Vue** compile a structured view, dirty only the dependent subtree, and persist **objects** rather than pixels. SOGR asks whether a language model can use the same contract: compile once, execute incrementally, persist the object rather than a token-level key–value (KV) cache.
 
@@ -27,7 +28,11 @@ The idea comes from **frontend engineering**. **React** and **Vue** compile a st
 
 ### What is SOGR?
 
-SOGR (Semantic Object Graph Runtime) is an architectural hypothesis for long-context language models. A low-frequency global-attention stage constructs or repairs a Semantic Object Graph. High-frequency graph-conditioned linear operators then propagate state along that graph. A structured cache invalidates dependents the way a reactive UI invalidates a component subtree.
+SOGR (Semantic Object Graph Runtime) is an **LLM architecture** hypothesis for long-context large language models. A low-frequency global-attention stage constructs or repairs a Semantic Object Graph. High-frequency graph-conditioned linear operators then propagate state along that graph. A structured cache invalidates dependents the way a reactive UI invalidates a component subtree.
+
+### Is this an LLM / large language model project?
+
+Yes. This repository is LLM research: Transformer-style language models, attention, KV cache, long context, and a proposed object-graph runtime. It is not an application chatbot. Experiments on this machine use DistilGPT-2 and 0.5B instruction LLMs on CPU.
 
 ### How is SOGR different from a KV cache?
 
